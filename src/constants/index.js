@@ -1,8 +1,8 @@
+import { title } from "framer-motion/client";
 import {
-  c,
   python,
   java,
-  cpp,
+  sql,
   javascript,
   html,
   css,
@@ -38,10 +38,9 @@ export const navLinks = [
 ];
 
 export const services = [
-  { title: "C", icon: c },
-  { title: "C++", icon: cpp },
   { title: "Python", icon: python },
   { title: "Java", icon: java },
+  { title: "SQL", icon: sql },
 ];
 
 export const technologies = [
@@ -136,9 +135,7 @@ export const projects = [
     name: "PayloadMaster",
     description:
       "Tool to automate payload creation using the Metasploit framework",
-    tags: [
-      { name: "shell", color: "blue-text-gradient" },
-    ],
+    tags: [{ name: "shell", color: "blue-text-gradient" }],
     image: payloadmaster,
     source_code_link: "https://github.com/lohitkolluri/PayloadMaster",
   },
@@ -165,6 +162,7 @@ export const projects = [
     ],
 
     image: sketcher,
-    source_code_link: "https://github.com/lohitkolluri/Image_to_Pencil_Sketch_App",
+    source_code_link:
+      "https://github.com/lohitkolluri/Image_to_Pencil_Sketch_App",
   },
 ];

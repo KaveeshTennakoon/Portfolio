@@ -5,9 +5,8 @@ import eduskill from "./company/eduskill.png";
 
 // Import tech stack images
 import python from "./tech-stack/python.png";
-import c from "./tech-stack/c.png";
-import cpp from "./tech-stack/cpp.png";
 import java from "./tech-stack/java.png";
+import sql from "./tech-stack/sql.png";
 
 // Import project images
 import weatherpedia from "./projects/WeatherPedia.png";
@@ -36,9 +35,8 @@ export {
   mathwork,
   edunet,
   python,
-  c,
-  cpp,
   java,
+  sql,
   github,
   css,
   git,

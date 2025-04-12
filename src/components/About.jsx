@@ -40,14 +40,10 @@ const About = () => {
         variants={fadeIn('', '', 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        I am a Computer Science student at SRM University and multilingual speaker with a passion
-        for ethical hacking, artificial intelligence, and neural language processing. I am looking
-        to join a company that values innovation, collaboration, and continuous learning and am
-        confident that my enthusiasm and drive will help me succeed in any role that leverages my
-        passion for technology.
+        I'm a Computer Science undergraduate at the Informatics Institute of Technology (IIT), interested in fullstack development, machine learning, and building solutions with real-world impact. I enjoy working on the fullstack, from designing responsive frontend interfaces to developing scalable backend architectures, and I'm always eager to pick up new technologies and challenges. I thrive in collaborative environments that encourage creativity, innovation, and continuous learning, and I’m always looking for opportunities to grow both personally and professionally.
       </motion.p>
 
-      <div className="mt-20 flex flex-wrap gap-10">
+      <div className="mt-20 flex justify-evenly items-center">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
