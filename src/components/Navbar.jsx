@@ -29,33 +29,24 @@ const Navbar = () => {
     }
   }, [toggle]);
 
-  const renderNavLinks = (isSecondary) => (
-    <ul className={`list-none ${isSecondary ? 'flex sm:hidden' : 'hidden sm:flex'} flex-row gap-6`}>
+  // Horizontal navigation for desktop
+  const renderDesktopNavLinks = () => (
+    <ul className="hidden sm:flex flex-row gap-6 list-none">
       {navLinks.map((link) => (
         <li
           key={link.id}
           className={`${
-            active === link.title ? 'text-white' : isSecondary ? 'text-secondary' : 'text-white'
+            active === link.title ? 'text-white' : 'text-white'
           } hover:text-white text-[20px] font-medium cursor-pointer`}
-          onClick={() => {
-            setActive(link.title);
-            if (isSecondary) {
-              setToggle(false);
-            }
-          }}
+          onClick={() => setActive(link.title)}
         >
           <a href={`#${link.id}`}>{link.title}</a>
         </li>
       ))}
-      <li
-        className={`text-${
-          isSecondary ? 'secondary' : 'white'
-        } hover:text-white text-[20px] font-medium cursor-pointer`}
-      >
+      <li className="text-white hover:text-white text-[20px] font-medium cursor-pointer">
         <button onClick={toggleResume} className="bg-[#915EFF] hover:bg-[#7d4ddb] text-white h-9 py-1 px-4 rounded-lg shadow-md transform transition duration-300 hover:scale-105">
           Resume
         </button>
-
       </li>
       <li>
         <button onClick={openGithub} className="bg-[#915EFF] hover:bg-[#7d4ddb] text-white w-9 h-9 rounded-lg shadow-md transform transition duration-300 hover:scale-105 flex items-center justify-center">
@@ -67,6 +58,39 @@ const Navbar = () => {
           <img src={linkedinLogo} alt="Linkedin Logo" />
         </button>
       </li>
+    </ul>
+  );
+
+  // Vertical navigation for mobile
+  const renderMobileNavLinks = () => (
+    <ul className="flex flex-col gap-4 list-none">
+      {navLinks.map((link) => (
+        <li
+          key={link.id}
+          className={`${
+            active === link.title ? 'text-white' : 'text-secondary'
+          } hover:text-white text-[18px] font-medium cursor-pointer`}
+          onClick={() => {
+            setActive(link.title);
+            setToggle(false);
+          }}
+        >
+          <a href={`#${link.id}`}>{link.title}</a>
+        </li>
+      ))}
+      <div className="flex flex-col sm:hidden gap-4 mt-2">
+        <button onClick={toggleResume} className="bg-[#915EFF] hover:bg-[#7d4ddb] text-white py-2 px-4 rounded-lg shadow-md transform transition duration-300 hover:scale-105 text-[16px] font-medium w-full">
+          Resume
+        </button>
+        <div className="flex flex-row gap-4 justify-center">
+          <button onClick={openGithub} className="bg-[#915EFF] hover:bg-[#7d4ddb] text-white w-10 h-10 rounded-lg shadow-md transform transition duration-300 hover:scale-105 flex items-center justify-center">
+            <img src={githubLogo} alt="GitHub Logo" className="w-6 h-6" />
+          </button>
+          <button onClick={openLinkedin} className="bg-[#915EFF] hover:bg-[#7d4ddb] text-white w-10 h-10 rounded-lg shadow-md transform transition duration-300 hover:scale-105 flex items-center justify-center">
+            <img src={linkedinLogo} alt="Linkedin Logo" className="w-6 h-6" />
+          </button>
+        </div>
+      </div>
     </ul>
   );
 
@@ -89,7 +113,9 @@ const Navbar = () => {
               <span className="sm:block hidden">TENNAKOON</span>
             </p>
           </Link>
-          {renderNavLinks(false)}
+          
+          {renderDesktopNavLinks()}
+          
           <div className="sm:hidden flex flex-1 justify-end items-center">
             <img
               src={toggle ? close : menu}
@@ -98,11 +124,11 @@ const Navbar = () => {
               onClick={() => setToggle(!toggle)}
             />
             <div
-              className={`p-4 black-gradient absolute top-14 right-0 mx-2 my-2 min-w-[120px] z-10 rounded-xl foggy-glass ${
+              className={`p-6 absolute top-14 right-0 mx-2 my-2 min-w-[200px] z-10 rounded-xl bg-black shadow-lg border border-[#333333] ${
                 toggle ? 'flex' : 'hidden'
               }`}
             >
-              {renderNavLinks(true)}
+              {renderMobileNavLinks()}
             </div>
           </div>
         </div>
