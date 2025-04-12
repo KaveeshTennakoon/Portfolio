@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { close, menu } from '../assets';
+import { close, logo, menu } from '../assets';
 import { navLinks } from '../constants';
 import { styles } from '../styles';
+import resumePdf from '../assets/KaveeshTennakoon_CV.pdf';
 
 const Navbar = () => {
   const [active, setActive] = useState('');
   const [toggle, setToggle] = useState(false);
 
   const toggleResume = () => {
-    const resumeUrl = '/Resume.pdf';
-    window.open(resumeUrl);
+    window.open(resumePdf);
   };
 
   useEffect(() => {
