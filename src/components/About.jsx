@@ -43,7 +43,7 @@ const About = () => {
         I'm a Computer Science undergraduate at the Informatics Institute of Technology (IIT), interested in fullstack development, machine learning, and building solutions with real-world impact. I enjoy working on the fullstack, from designing responsive frontend interfaces to developing scalable backend architectures, and I'm always eager to pick up new technologies and challenges. I thrive in collaborative environments that encourage creativity, innovation, and continuous learning, and I’m always looking for opportunities to grow both personally and professionally.
       </motion.p>
 
-      <div className="mt-20 flex justify-evenly items-center">
+      <div className="mt-20 flex flex-wrap gap-10 justify-center">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
