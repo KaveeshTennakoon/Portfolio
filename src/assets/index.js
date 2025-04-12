@@ -54,7 +54,6 @@ export {
   mhft,
   sketcher,
   CompileVortex,
-  logo,
   menu,
   close,
   eduskill,

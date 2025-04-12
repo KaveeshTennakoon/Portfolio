@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { close, logo, menu } from '../assets';
+import { close, menu } from '../assets';
 import { navLinks } from '../constants';
 import { styles } from '../styles';
 import resumePdf from '../assets/KaveeshTennakoon_CV.pdf';
 import githubLogo from '../assets/github.png';
+import linkedinLogo from '../assets/linkedin.png';
 
 const Navbar = () => {
   const [active, setActive] = useState('');
@@ -16,6 +17,10 @@ const Navbar = () => {
 
   const openGithub = () => {
     window.open("https://github.com/KaveeshTennakoon");
+  }
+
+  const openLinkedin = () => {
+    window.open("https://www.linkedin.com/in/kaveesh-tennakoon/");
   }
 
   useEffect(() => {
@@ -55,6 +60,11 @@ const Navbar = () => {
       <li>
         <button onClick={openGithub} className="bg-[#915EFF] hover:bg-[#7d4ddb] text-white w-9 h-9 rounded-lg shadow-md transform transition duration-300 hover:scale-105 flex items-center justify-center">
           <img src={githubLogo} alt="GitHub Logo" />
+        </button>
+      </li>
+      <li>
+        <button onClick={openLinkedin} className="bg-[#915EFF] hover:bg-[#7d4ddb] text-white w-9 h-9 px-1 py-1 rounded-lg shadow-md transform transition duration-300 hover:scale-105 flex items-center justify-center">
+          <img src={linkedinLogo} alt="Linkedin Logo" />
         </button>
       </li>
     </ul>
