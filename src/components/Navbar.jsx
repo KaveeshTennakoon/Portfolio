@@ -4,6 +4,7 @@ import { close, logo, menu } from '../assets';
 import { navLinks } from '../constants';
 import { styles } from '../styles';
 import resumePdf from '../assets/KaveeshTennakoon_CV.pdf';
+import githubLogo from '../assets/github.png';
 
 const Navbar = () => {
   const [active, setActive] = useState('');
@@ -12,6 +13,10 @@ const Navbar = () => {
   const toggleResume = () => {
     window.open(resumePdf);
   };
+
+  const openGithub = () => {
+    window.open("https://github.com/KaveeshTennakoon");
+  }
 
   useEffect(() => {
     if (toggle) {
@@ -42,7 +47,15 @@ const Navbar = () => {
           isSecondary ? 'secondary' : 'white'
         } hover:text-white text-[20px] font-medium cursor-pointer`}
       >
-        <button onClick={toggleResume}>Resume</button>
+        <button onClick={toggleResume} className="bg-[#915EFF] hover:bg-[#7d4ddb] text-white h-9 py-1 px-4 rounded-lg shadow-md transform transition duration-300 hover:scale-105">
+          Resume
+        </button>
+
+      </li>
+      <li>
+        <button onClick={openGithub} className="bg-[#915EFF] hover:bg-[#7d4ddb] text-white w-9 h-9 rounded-lg shadow-md transform transition duration-300 hover:scale-105 flex items-center justify-center">
+          <img src={githubLogo} alt="GitHub Logo" />
+        </button>
       </li>
     </ul>
   );
