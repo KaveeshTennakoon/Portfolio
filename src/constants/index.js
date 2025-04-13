@@ -8,18 +8,20 @@ import {
   css,
   reactjs,
   tailwind,
-  nodejs,
   git,
-  edunet,
   weatherpedia,
   termpw,
   payloadmaster,
-  threejs,
   mhft,
   sketcher,
-  mathwork,
   CompileVortex,
-  eduskill,
+  springboot,
+  django,
+  flask,
+  bootstrap,
+  angular,
+  mysql,
+  flutter
 } from "../assets";
 
 export const navLinks = [
@@ -49,8 +51,13 @@ export const technologies = [
   { name: "JavaScript", icon: javascript },
   { name: "Rect JS", icon: reactjs },
   { name: "Tailwind CSS", icon: tailwind },
-  { name: "Node JS", icon: nodejs },
-  { name: "Three JS", icon: threejs },
+  { name: "Bootstrap", icon: bootstrap },
+  { name: "SpringBoot", icon: springboot },
+  { name: "Django", icon: django },
+  { name: "Flask", icon: flask },
+  { name: "Angular", icon: angular },
+  { name: "MySQL", icon: mysql },
+  { name: "Flutter", icon: flutter },
   { name: "git", icon: git },
 ];
 
