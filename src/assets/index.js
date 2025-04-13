@@ -7,6 +7,7 @@ import sql from "./tech-stack/sql.png";
 import resilify from "./projects/resilify.png";
 import vsmart from "./projects/vsmart.png";
 import movierecommendation from "./projects/movierecommendation.png";
+import wordcounter from "./projects/wordcounter.png";
 
 // Import tech logos
 import css from "./tech/css.png";
@@ -50,5 +51,6 @@ export {
   flutter,
   resilify,
   vsmart,
-  movierecommendation
+  movierecommendation,
+  wordcounter
 };

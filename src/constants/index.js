@@ -18,7 +18,8 @@ import {
   flutter,
   resilify,
   vsmart,
-  movierecommendation
+  movierecommendation,
+  wordcounter
 } from "../assets";
 
 export const navLinks = [
@@ -111,5 +112,15 @@ export const projects = [
     ],
     image: movierecommendation,
     source_code_link: "https://github.com/KaveeshTennakoon/MovieRecommendation",
+  },
+  {
+    name: "Word Counter",
+    description:
+      "This is a simple word counter web application built with Django. It allows users to input text and counts the number of words in the text.",
+    tags: [
+      { name: "Django", color: "blue-text-gradient" },
+    ],
+    image: wordcounter,
+    source_code_link: "https://github.com/KaveeshTennakoon/Django_WordCounter",
   },
 ];
