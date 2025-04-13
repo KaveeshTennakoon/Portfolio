@@ -16,7 +16,8 @@ import {
   angular,
   mysql,
   flutter,
-  resilify
+  resilify,
+  vsmart
 } from "../assets";
 
 export const navLinks = [
@@ -86,5 +87,17 @@ export const projects = [
     ],
     image: resilify,
     source_code_link: "https://resilify.live",
+  },
+  {
+    name: "VSmart Fashion",
+    description:
+      "E-commerce website for clothing store with modern features such as product filtering, order tracking, and secure payment integration(expected in future updates).",
+    tags: [
+      { name: "ReactJS", color: "blue-text-gradient" },
+      { name: "Strapi", color: "green-text-gradient" },
+      { name: "MySQL", color: "pink-text-gradient" },
+    ],
+    image: vsmart,
+    source_code_link: "https://www.vsmartfashion.lk",
   },
 ];

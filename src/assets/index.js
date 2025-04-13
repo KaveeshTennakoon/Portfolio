@@ -5,6 +5,7 @@ import sql from "./tech-stack/sql.png";
 
 // Import project images
 import resilify from "./projects/resilify.png";
+import vsmart from "./projects/vsmart.png";
 
 // Import tech logos
 import css from "./tech/css.png";
@@ -46,5 +47,6 @@ export {
   angular,
   mysql,
   flutter,
-  resilify
+  resilify,
+  vsmart
 };
