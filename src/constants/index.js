@@ -19,7 +19,8 @@ import {
   resilify,
   vsmart,
   movierecommendation,
-  wordcounter
+  wordcounter,
+  eventticket
 } from "../assets";
 
 export const navLinks = [
@@ -122,5 +123,18 @@ export const projects = [
     ],
     image: wordcounter,
     source_code_link: "https://github.com/KaveeshTennakoon/Django_WordCounter",
+  },
+  {
+    name: "Event Ticket",
+    description:
+      "A web-based platform for browsing, booking, and managing event tickets with real-time updates and secure payment integration.",
+    tags: [
+      { name: "Angluar", color: "blue-text-gradient" },
+      { name: "Springboot", color: "blue-text-gradient" },
+      { name: "MySQL", color: "blue-text-gradient" },
+      
+    ],
+    image: eventticket,
+    source_code_link: "https://github.com/KaveeshTennakoon/EventTicketing",
   },
 ];

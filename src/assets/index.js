@@ -8,6 +8,7 @@ import resilify from "./projects/resilify.png";
 import vsmart from "./projects/vsmart.png";
 import movierecommendation from "./projects/movierecommendation.png";
 import wordcounter from "./projects/wordcounter.png";
+import eventticket from "./projects/eventticket.png";
 
 // Import tech logos
 import css from "./tech/css.png";
@@ -52,5 +53,6 @@ export {
   resilify,
   vsmart,
   movierecommendation,
-  wordcounter
+  wordcounter,
+  eventticket
 };
