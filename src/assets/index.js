@@ -1,20 +1,10 @@
-// Import company logos
-import mathwork from "./company/mathwork.png";
-import edunet from "./company/edunet.png";
-import eduskill from "./company/eduskill.png";
-
 // Import tech stack images
 import python from "./tech-stack/python.png";
 import java from "./tech-stack/java.png";
 import sql from "./tech-stack/sql.png";
 
 // Import project images
-import weatherpedia from "./projects/WeatherPedia.png";
-import termpw from "./projects/termpw.png";
-import payloadmaster from "./projects/payloadmaster.png";
-import mhft from "./projects/mhft.png";
-import sketcher from "./projects/sketcher.png";
-import CompileVortex from "./projects/CompileVortex.png";
+import resilify from "./projects/resilify.png";
 
 // Import tech logos
 import css from "./tech/css.png";
@@ -37,8 +27,6 @@ import menu from "./menu.svg";
 import close from "./close.svg";
 
 export {
-  mathwork,
-  edunet,
   python,
   java,
   sql,
@@ -49,20 +37,14 @@ export {
   javascript,
   reactjs,
   tailwind,
-  weatherpedia,
-  termpw,
-  payloadmaster,
-  mhft,
-  sketcher,
-  CompileVortex,
   menu,
   close,
-  eduskill,
   springboot,
   django,
   flask,
   bootstrap,
   angular,
   mysql,
-  flutter
+  flutter,
+  resilify
 };
