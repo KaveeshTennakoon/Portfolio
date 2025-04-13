@@ -9,6 +9,7 @@ import vsmart from "./projects/vsmart.png";
 import movierecommendation from "./projects/movierecommendation.png";
 import wordcounter from "./projects/wordcounter.png";
 import eventticket from "./projects/eventticket.png";
+import intellihack from "./projects/intellihack.jpeg";
 
 // Import tech logos
 import css from "./tech/css.png";
@@ -54,5 +55,6 @@ export {
   vsmart,
   movierecommendation,
   wordcounter,
-  eventticket
+  eventticket,
+  intellihack
 };

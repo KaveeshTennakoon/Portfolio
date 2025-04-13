@@ -20,7 +20,8 @@ import {
   vsmart,
   movierecommendation,
   wordcounter,
-  eventticket
+  eventticket,
+  intellihack
 } from "../assets";
 
 export const navLinks = [
@@ -132,9 +133,19 @@ export const projects = [
       { name: "Angluar", color: "blue-text-gradient" },
       { name: "Springboot", color: "blue-text-gradient" },
       { name: "MySQL", color: "blue-text-gradient" },
-      
     ],
     image: eventticket,
     source_code_link: "https://github.com/KaveeshTennakoon/EventTicketing",
+  },
+  {
+    name: "Intellihack",
+    description:
+      "ML and clustering to uncover customer insights, enabling smarter marketing and personalized business strategies through data analysis.",
+    tags: [
+      { name: "scikit-learn", color: "blue-text-gradient" },
+      { name: "K-Means Clustering", color: "blue-text-gradient" },
+    ],
+    image: intellihack,
+    source_code_link: "https://github.com/KaveeshTennakoon/Intellihack_DotMatrix_Task2",
   },
 ];
