@@ -67,16 +67,14 @@ const Contact = () => {
 
     emailjs
       .send(
-        "service_r2i0by4",
-        "template_mf5x3bh",
+        "service_dtuim7n",
+        "template_zoc2zik",
         {
-          from_name: form.name,
-          to_name: "Lohit Kolluri",
-          from_email: form.email,
-          to_email: "lohitkolluri@gmail.com",
+          name: form.name,
+          email: form.email,
           message: form.message,
         },
-        "p-gXzzyvEhPaJ0XA-"
+        "cKBdfync2YoJRzmss"
       )
       .then(
         () => {
@@ -124,14 +122,17 @@ const Contact = () => {
           />
           {emailError && <span className="text-red-500">{emailError}</span>}
 
-          <InputField
-            label="Your Message"
-            name="message"
-            value={form.message}
-            onChange={handleChange}
-            placeholder="What you want to say...?"
-            type="text"
-          />
+          <label className="flex flex-col">
+            <span className="text-white font-medium mb-4">Your Message</span>
+            <textarea
+              name="message"
+              value={form.message}
+              onChange={handleChange}
+              placeholder="What you want to say...?"
+              rows={6}
+              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+            />
+          </label>
 
           <button
             type="submit"
