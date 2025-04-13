@@ -27,7 +27,7 @@ const ProjectCard = ({ name, description, tags, image, source_code_link }) => {
           />
         </div>
         <div className="mt-5" onClick={() => window.open(source_code_link, "_blank")}>
-          <p className="mt-2 text-white text-[14px]">Link: <span className="underline cursor-pointer">{source_code_link}</span></p>
+          <p className="mt-2 text-white text-[14px]">Source: <span className="underline cursor-pointer overflow-hidden text-ellipsis inline-block max-w-[260px] align-bottom whitespace-nowrap">{source_code_link}</span></p>
         </div>
         <div className="mt-3">
           <h3 className="text-white font-bold text-[24px]">{name}</h3>

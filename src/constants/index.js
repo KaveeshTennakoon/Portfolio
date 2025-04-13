@@ -17,7 +17,8 @@ import {
   mysql,
   flutter,
   resilify,
-  vsmart
+  vsmart,
+  movierecommendation
 } from "../assets";
 
 export const navLinks = [
@@ -99,5 +100,16 @@ export const projects = [
     ],
     image: vsmart,
     source_code_link: "https://www.vsmartfashion.lk",
+  },
+  {
+    name: "Movie Recommendation",
+    description:
+      "Web application that recommends movies based on user preferences. It uses machine learning to analyze movie data and provide personalized recommendations to users.",
+    tags: [
+      { name: "Django", color: "blue-text-gradient" },
+      { name: "scikit-learn", color: "green-text-gradient" },
+    ],
+    image: movierecommendation,
+    source_code_link: "https://github.com/KaveeshTennakoon/MovieRecommendation",
   },
 ];
