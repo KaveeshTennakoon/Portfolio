@@ -43,17 +43,17 @@ const Navbar = () => {
         </li>
       ))}
       <li className="text-white hover:text-white text-[20px] font-medium cursor-pointer">
-        <button onClick={toggleResume} className="bg-[#915EFF] hover:bg-[#7d4ddb] text-white h-9 py-1 px-4 rounded-lg shadow-md transform transition duration-300 hover:scale-105">
+        <button onClick={toggleResume} className="bg-[#3186fa] hover:bg-[#226fd8] text-white h-9 py-1 px-4 rounded-lg shadow-md transform transition duration-300 hover:scale-105">
           Resume
         </button>
       </li>
       <li>
-        <button onClick={openGithub} className="bg-[#915EFF] hover:bg-[#7d4ddb] text-white w-9 h-9 rounded-lg shadow-md transform transition duration-300 hover:scale-105 flex items-center justify-center">
+        <button onClick={openGithub} className="bg-[#3186fa] hover:bg-[#226fd8] text-white w-9 h-9 rounded-lg shadow-md transform transition duration-300 hover:scale-105 flex items-center justify-center">
           <img src={githubLogo} alt="GitHub Logo" />
         </button>
       </li>
       <li>
-        <button onClick={openLinkedin} className="bg-[#915EFF] hover:bg-[#7d4ddb] text-white w-9 h-9 px-1 py-1 rounded-lg shadow-md transform transition duration-300 hover:scale-105 flex items-center justify-center">
+        <button onClick={openLinkedin} className="bg-[#3186fa] hover:bg-[#226fd8] text-white w-9 h-9 px-1 py-1 rounded-lg shadow-md transform transition duration-300 hover:scale-105 flex items-center justify-center">
           <img src={linkedinLogo} alt="Linkedin Logo" />
         </button>
       </li>
@@ -78,14 +78,14 @@ const Navbar = () => {
         </li>
       ))}
       <div className="flex flex-col sm:hidden gap-4 mt-2">
-        <button onClick={toggleResume} className="bg-[#915EFF] hover:bg-[#7d4ddb] text-white py-2 px-4 rounded-lg shadow-md transform transition duration-300 hover:scale-105 text-[16px] font-medium w-full">
+        <button onClick={toggleResume} className="bg-[#3186fa] hover:bg-[#226fd8] text-white py-2 px-4 rounded-lg shadow-md transform transition duration-300 hover:scale-105 text-[16px] font-medium w-full">
           Resume
         </button>
         <div className="flex flex-row gap-4 justify-center">
-          <button onClick={openGithub} className="bg-[#915EFF] hover:bg-[#7d4ddb] text-white w-10 h-10 rounded-lg shadow-md transform transition duration-300 hover:scale-105 flex items-center justify-center">
+          <button onClick={openGithub} className="bg-[#3186fa] hover:bg-[#226fd8] text-white w-10 h-10 rounded-lg shadow-md transform transition duration-300 hover:scale-105 flex items-center justify-center">
             <img src={githubLogo} alt="GitHub Logo" className="w-6 h-6" />
           </button>
-          <button onClick={openLinkedin} className="bg-[#915EFF] hover:bg-[#7d4ddb] text-white w-10 h-10 rounded-lg shadow-md transform transition duration-300 hover:scale-105 flex items-center justify-center">
+          <button onClick={openLinkedin} className="bg-[#3186fa] hover:bg-[#226fd8] text-white w-10 h-10 rounded-lg shadow-md transform transition duration-300 hover:scale-105 flex items-center justify-center">
             <img src={linkedinLogo} alt="Linkedin Logo" className="w-6 h-6" />
           </button>
         </div>

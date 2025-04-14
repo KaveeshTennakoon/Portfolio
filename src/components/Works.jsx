@@ -54,7 +54,7 @@ const GithubButton = () => {
     <div className="w-full flex justify-center mt-12">
       <button 
         onClick={openGithub} 
-        className="bg-[#915EFF] hover:bg-[#7d4ddb] text-white py-2 px-6 rounded-lg shadow-md transform transition duration-300 hover:scale-105 text-[16px] font-medium flex items-center gap-2 max-w-xs"
+        className="bg-[#3186fa] hover:bg-[#226fd8] text-white py-2 px-6 rounded-lg shadow-md transform transition duration-300 hover:scale-105 text-[16px] font-medium flex items-center gap-2 max-w-xs"
       >
         <img src={github} alt="github" className="w-6 h-6 object-contain invert" />
         More projects on GitHub

@@ -28,10 +28,10 @@ const Footer = () => {
               Building innovative solutions through creative coding and passionate development.
             </p>
             <div className="flex gap-4 mt-4">
-              <button onClick={openGithub} className="bg-[#915EFF] hover:bg-[#7d4ddb] w-10 h-10 rounded-lg shadow-md transform transition duration-300 hover:scale-105 flex items-center justify-center">
+              <button onClick={openGithub} className="bg-[#3186fa] hover:bg-[#226fd8] w-10 h-10 rounded-lg shadow-md transform transition duration-300 hover:scale-105 flex items-center justify-center">
                 <img src={githubLogo} alt="GitHub Logo" className="w-6 h-6" />
               </button>
-              <button onClick={openLinkedin} className="bg-[#915EFF] hover:bg-[#7d4ddb] w-10 h-10 rounded-lg shadow-md transform transition duration-300 hover:scale-105 flex items-center justify-center">
+              <button onClick={openLinkedin} className="bg-[#3186fa] hover:bg-[#226fd8] w-10 h-10 rounded-lg shadow-md transform transition duration-300 hover:scale-105 flex items-center justify-center">
                 <img src={linkedinLogo} alt="LinkedIn Logo" className="w-6 h-6" />
               </button>
             </div>
@@ -60,7 +60,7 @@ const Footer = () => {
               <li className="mt-4">
                 <a 
                   href="#contact" 
-                  className="bg-[#915EFF] hover:bg-[#7d4ddb] text-white py-2 px-4 rounded-lg shadow-md transform transition duration-300 hover:scale-105 inline-block"
+                  className="bg-[#3186fa] hover:bg-[#226fd8] text-white py-2 px-4 rounded-lg shadow-md transform transition duration-300 hover:scale-105 inline-block"
                 >
                   Contact Me
                 </a>
