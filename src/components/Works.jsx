@@ -3,6 +3,7 @@ import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
+import { github } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
@@ -44,6 +45,24 @@ const ProjectCard = ({ name, description, tags, image, source_code_link, index }
   );
 };
 
+const GithubButton = () => {
+  const openGithub = () => {
+    window.open("https://github.com/KaveeshTennakoon?tab=repositories", "_blank");
+  };
+
+  return (
+    <div className="w-full flex justify-center mt-12">
+      <button 
+        onClick={openGithub} 
+        className="bg-[#915EFF] hover:bg-[#7d4ddb] text-white py-2 px-6 rounded-lg shadow-md transform transition duration-300 hover:scale-105 text-[16px] font-medium flex items-center gap-2 max-w-xs"
+      >
+        <img src={github} alt="github" className="w-6 h-6 object-contain invert" />
+        More projects on GitHub
+      </button>
+    </div>
+  );
+};
+
 const AnimatedWorks = () => {
   return (
     <>
@@ -73,6 +92,10 @@ const AnimatedWorks = () => {
           </motion.div>
         ))}
       </div>
+
+      <motion.div variants={fadeIn("up", "spring", projects.length * 0.5 + 0.2, 0.5)}>
+        <GithubButton />
+      </motion.div>
     </>
   );
 };
@@ -98,6 +121,8 @@ const StaticWorks = () => {
           <ProjectCard key={`project-${index}`} {...project} index={index} />
         ))}
       </div>
+
+      <GithubButton />
     </>
   );
 };
