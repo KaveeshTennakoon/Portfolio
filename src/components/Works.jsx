@@ -1,23 +1,22 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
-import { github } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 
-const ProjectCard = ({ name, description, tags, image, source_code_link }) => {
+const ProjectCard = ({ name, description, tags, image, source_code_link, index }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring")}>
+    <div className="xs:w-[350px] w-full">
       <Tilt
         options={{
           max: 45,
           scale: 1,
           speed: 450,
         }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
+        className="bg-tertiary p-5 rounded-2xl w-full h-full"
       >
         <div className="relative w-full h-[230px]">
           <img
@@ -41,31 +40,84 @@ const ProjectCard = ({ name, description, tags, image, source_code_link }) => {
           ))}
         </div>
       </Tilt>
-    </motion.div>
+    </div>
   );
 };
 
-const Works = () => {
+const AnimatedWorks = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} `}>My work</p>
-        <h2 className={`${styles.sectionHeadText}`}>Projects</h2>
+        <p className={styles.sectionSubText}>My work</p>
+        <h2 className={styles.sectionHeadText}>Projects</h2>
       </motion.div>
+
       <div className="w-full flex">
-        <motion.p variants={fadeIn("", "", 0.1)} className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]">
+        <motion.p
+          variants={fadeIn("", "", 0.1, 1)}
+          className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
+        >
           Following projects showcase my skills and experience through examples
           of my work. Each project is briefly described with links to code
           repositories in it.
         </motion.p>
       </div>
-      <div className="mt-20 flex flex-wrap gap-7">
+
+      <div className="mt-20 flex flex-wrap gap-7 justify-center md:justify-start">
         {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} {...project} />
+          <motion.div
+            key={`project-${index}`}
+            variants={fadeIn("up", "spring", index * 0.5, 0.75)}
+          >
+            <ProjectCard {...project} index={index} />
+          </motion.div>
         ))}
       </div>
     </>
   );
+};
+
+const StaticWorks = () => {
+  return (
+    <>
+      <div>
+        <p className={styles.sectionSubText}>My work</p>
+        <h2 className={styles.sectionHeadText}>Projects</h2>
+      </div>
+
+      <div className="w-full flex">
+        <p className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]">
+          Following projects showcase my skills and experience through examples
+          of my work. Each project is briefly described with links to code
+          repositories in it.
+        </p>
+      </div>
+
+      <div className="mt-20 flex flex-wrap gap-7 justify-center md:justify-start">
+        {projects.map((project, index) => (
+          <ProjectCard key={`project-${index}`} {...project} index={index} />
+        ))}
+      </div>
+    </>
+  );
+};
+
+const Works = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 875);
+    };
+
+    checkMobile();
+
+    window.addEventListener("resize", checkMobile);
+
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  return isMobile ? <StaticWorks /> : <AnimatedWorks />;
 };
 
 export default SectionWrapper(Works, "projects");
