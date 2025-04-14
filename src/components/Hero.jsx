@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
-import { ComputersCanvas } from "./canvas";
+import { AvatarCanvas } from "./canvas";
 import Typewriter from "typewriter-effect";
 import resumePdf from "../assets/KaveeshTennakoon_CV.pdf";
 
@@ -36,7 +36,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <ComputersCanvas />
+      <AvatarCanvas />
 
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
         <a href="#about">

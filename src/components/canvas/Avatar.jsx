@@ -9,11 +9,11 @@ const AvatarModel = ({ isMobile }) => {
   const group = useRef();
   const mixer = useRef();
   
-  const { scene } = useGLTF('models/67fc969231f1c6f08b18e587.glb');
+  const { scene } = useGLTF('models/Avatar.glb');
   const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene]);
   const { nodes, materials } = useGraph(clone);
   
-  const fbx = useFBX('animations/danceB.fbx');
+  const fbx = useFBX('animations/AvatarDance.fbx');
   
   useEffect(() => {
     if (fbx && fbx.animations && fbx.animations.length > 0) {
@@ -78,7 +78,7 @@ const MemoizedAvatarModel = React.memo(AvatarModel);
 
 useGLTF.preload('models/67fc969231f1c6f08b18e587.glb');
 
-const ComputersCanvas = () => {
+const AvatarCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -116,4 +116,4 @@ const ComputersCanvas = () => {
   );
 };
 
-export default ComputersCanvas;
+export default AvatarCanvas;
