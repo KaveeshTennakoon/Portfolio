@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { close, menu } from '../assets';
 import { navLinks } from '../constants';
 import { styles } from '../styles';
-import resumePdf from '../assets/KaveeshTennakoon_CV.pdf';
 import githubLogo from '../assets/github.png';
 import linkedinLogo from '../assets/linkedin.png';
 

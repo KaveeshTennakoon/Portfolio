@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { AvatarCanvas } from "./canvas";
 import Typewriter from "typewriter-effect";
-import resumePdf from "../assets/KaveeshTennakoon_CV.pdf";
 
 const Hero = () => {
   return (
