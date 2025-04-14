@@ -6,7 +6,6 @@ import Typewriter from "typewriter-effect";
 import resumePdf from "../assets/KaveeshTennakoon_CV.pdf";
 
 const Hero = () => {
-
   return (
     <section className="relative w-full h-screen mx-auto">
       <div className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}>
@@ -19,19 +18,21 @@ const Hero = () => {
           <h1 className={`${styles.heroHeadText} text-white`}>
             Hi, I'm <span className="text-[#915EFF]">Kaveesh</span>
           </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I do
-            <Typewriter
-              options={{
-                strings: ["Fullstack development", "AI & ML", "Open Source Contributions"],
-                autoStart: true,
-                loop: true,
-                loopCount: Infinity,
-                deleteSpeed: "natural",
-                pauseFor: 1000,
-              }}
-            />
-          </p>
+          <div className={`${styles.heroSubText} mt-2 text-white-100`}>
+            I do{" "}
+            <span className="inline-block">
+              <Typewriter
+                options={{
+                  strings: ["Fullstack development", "AI & ML", "Open Source Contributions"],
+                  autoStart: true,
+                  loop: true,
+                  loopCount: Infinity,
+                  deleteSpeed: "natural",
+                  pauseFor: 1000,
+                }}
+              />
+            </span>
+          </div>
         </div>
       </div>
 
