@@ -11,7 +11,7 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
   const toggleResume = () => {
-    window.open(resumePdf);
+    window.open("/KaveeshTennakoon.pdf");
   };
 
   const openGithub = () => {
